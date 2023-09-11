@@ -1,0 +1,112 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+}
+
+main {
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
+
+footer > p {
+    margin:0;
+}
+
+main > section {
+    margin: auto;
+    margin-bottom: 0px;
+    width: 95%; 
+    background-color: aqua;
+}
+
+main > section > div{
+    display: inline-block;
+    width: 49%;
+    padding-bottom: 30px;
+    margin-right: 2px;
+    
+}
+
+main > section > div > div{
+    display: inline-block;  
+}
+
+p{
+    margin: 0;
+}
+
+.material-symbols-outlined{
+    transform: translateY(+30%);
+}
+
+.inlineData > p{
+    display: inline-block;
+    margin-bottom: .2em;
+    margin-right: 1em;
+    margin-left: .2em;
+}
+
+#imgClima{
+    min-height: 100px;
+    min-width: 100px;
+    width: 30%;
+    display: inline-block;
+}
+
+#tempsCidade{
+    font-size: 2em;
+    padding-left: .2em;
+}
+
+#imgClima{
+    transform: translateY(-100%);
+}
+
+#wheaterIcon{
+    transform: translateY(+30%);
+    width: 50px;
+    height: 50px;
+}
+
+#lblCidade{
+    font-size: 3em;
+}
+
+#divMaisDados{
+    font-size: 1.5em;
+}
+
+@media (max-width:825px) {
+    main > section > div{
+        min-width: 100%;
+        
+    }
+
+    #imgClima{
+        transform: translateY(-0%);
+        min-width: 100%;
+    }
+
+    #lblCidade{
+        font-size: 2em;
+    }
+}
+
+@media (max-width:300px) {
+    #lblCidade{
+        font-size: 1.2em;
+    }
+}
