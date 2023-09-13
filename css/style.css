@@ -5,6 +5,36 @@ body{
     text-transform: capitalize;
 }
 
+header{
+    padding: .2em;
+    background-color: lightcoral;
+}
+
+header > div {
+    display: inline-block;
+}
+
+header img{
+    width: 70px;
+    height: 60px;
+    margin: .5em;
+}
+
+header button{
+    height: 45px;  
+    width: 40px;  
+    transform: translateY(14.5%);
+}
+
+header input{
+    height: 40px; 
+    width: 65vw;
+}
+
+header .material-symbols-outlined{
+    transform: translateY(-.3%);
+}
+
 main {
     margin-bottom: 5%;
     margin-top: 5%;
@@ -89,7 +119,11 @@ p{
     font-size: 1.5em;
 }
 
-@media (max-width:825px) {
+#searchForm{
+    transform: translateY(-70%);
+}
+
+@media (max-width:760px) {
     main > section > div{
         min-width: 100%;
         
@@ -103,10 +137,18 @@ p{
     #lblCidade{
         font-size: 2em;
     }
+
+    #searchForm{
+        transform: translateY(-0%);
+    }
 }
 
 @media (max-width:300px) {
     #lblCidade{
         font-size: 1.2em;
+    }
+
+    header input{
+        width: 50vw;
     }
 }

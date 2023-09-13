@@ -2,24 +2,30 @@ window.onload = function () {
     iniciar();
 }
 
-function iniciar(){
-    getLocationAndWeather();
+document.getElementById("btnSearchLocalWeather").addEventListener("click",function () {
+    carregarLocal();
+});
 
+function iniciar(){
+    buscarClimaAtual(-23,-46);
+    buscarClimaDias(-23,-46);
 }
 
-async function getLocationAndWeather(){
+function carregarLocal() {
     if(navigator.geolocation){
-        navigator.geolocation.getCurrentPosition(function (pos) {
-            buscarClima(pos.coords.latitude,pos.coords.longitude);
-            buscarClimaDias(pos.coords.latitude,pos.coords.longitude);
-        });
+        let authorized = confirm('Ao clicar em "OK", a sua localização será utilizada para mostrar o clima atual na sua região.');
+        if(authorized){
+            navigator.geolocation.getCurrentPosition(function (pos) {
+                buscarClimaAtual(pos.coords.latitude,pos.coords.longitude);
+                buscarClimaDias(pos.coords.latitude,pos.coords.longitude);
+            });
+        }        
     }else{
         alert("Browser sem suporte a localização");
     }
-
 }
 
-function buscarClima(latitude, longitude){
+function buscarClimaAtual(latitude, longitude){
     let div = document.getElementById('info');
     let url = "https://api.openweathermap.org/data/2.5/weather?lat="+latitude+"&lon="+longitude+"&appid=0f99fb452e1f092b08e2a0c5e4e0b115";  
    

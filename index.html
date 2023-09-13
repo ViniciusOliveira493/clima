@@ -11,15 +11,30 @@
 </head>
 <body>
     <header>
-        
+        <div>
+            <img src="./img/cloud.png" alt="weather logo">
+        </div>
+        <div id="searchForm">
+            <input type="text" id="txtCidade" placeholder="Digite o nome de uma cidade...">
+            <button>
+                <span class="material-symbols-outlined">
+                    search
+                </span>
+            </button>
+            <button id="btnSearchLocalWeather">
+                <span class="material-symbols-outlined">
+                    location_searching
+                </span>
+            </button>
+        </div>
     </header>
     <main>
         <section>
             <div id="divTempoAgora">
                 <div id="tempsCidade">
-                    <p><span id="lblCidade">São Paulo</span></p>
+                    <p><span id="lblCidade">-- -- --</span></p>
                     <p>
-                        <span id="lblCondition">Clear Sky</span>
+                        <span id="lblCondition">--- --- ---</span>
                         <img src="" alt="weather icon" id="wheaterIcon">
                     </p>
                     <p>
