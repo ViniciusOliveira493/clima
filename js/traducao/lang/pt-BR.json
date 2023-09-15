@@ -1,0 +1,15 @@
+{
+    "site":{
+        "txtSearch":"Digite o nome de uma cidade..."
+        ,"lblTemp":"Temperatura"
+        ,"lblMax":"Máxima: "
+        ,"lblMin":"Mínima: "
+        ,"lblFeel":"Sensação térmica: "
+        ,"lblHumidity":"Humidade:"
+        ,"lblAtmPress":"Pressão Atmosférica: "
+        ,"lblVisibility":"Visibilidade:"
+        ,"lblWind":"vento: "
+        ,"lblWindSpeed":"metros/segundo"
+        ,"lblCloud":"Nuvens: "
+    }
+}

@@ -2,12 +2,14 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="esse site exibe o clima atual na localização do usuário ou em uma local pesquisado">
-    <title>Site</title>
+    <title>Clima Atual</title>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" />
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -15,8 +17,9 @@
             <img src="./img/cloud.png" alt="weather logo">
         </div>
         <div id="searchForm">
-            <input type="text" id="txtCidade" placeholder="Digite o nome de uma cidade...">
-            <button>
+            <label for="txtCidade" class="none">Cidade</label>
+            <input type="text" id="txtCidade" placeholder="">
+            <button id="btnSearch">
                 <span class="material-symbols-outlined">
                     search
                 </span>
@@ -38,21 +41,21 @@
                         <img src="" alt="weather icon" id="wheaterIcon">
                     </p>
                     <p>
-                        <span id="lblTemp">Temperature</span>
+                        <span id="lblTemp"></span>
                         :
-                        <span id="lblTempNumber">30</span>
+                        <span id="lblTempNumber">0</span>
                         °C
                     </p>
                     <p>
-                        Max: 
-                        <span id="lblMaxTemp">35</span>
+                        <span id="lblMax"></span>
+                        <span id="lblMaxTemp">0</span>
                         / 
-                        Min: 
-                        <span id="lblMinTemp">25</span>
+                        <span id="lblMin"></span>
+                        <span id="lblMinTemp">0</span>
                     </p>
                     <p>
-                        RealFell: 
-                        <span id="lblFellTemp">28</span>
+                        <span id="lblFeel"></span>
+                        <span id="lblFellTemp">0</span>
                 
                     </p>
                 </div>
@@ -63,25 +66,25 @@
                         <span id="lblHumidityIcon" class="material-symbols-outlined">
                             humidity_percentage
                         </span>
-                        Humidity: 
-                        <span id="lblHumidity">35</span>
+                        <span id="lblHumidity"></span> 
+                        <span id="lblHumidityNumber">0</span>
                         %
                     </p>
                     <p>
                         <span class="material-symbols-outlined">
                             airwave
                         </span>
-                        Atmospheric Pressure: 
-                        <span id="lblAtmPress">35</span>
+                        <span id="lblAtmPress"></span>
+                        <span id="lblAtmPressNumber">0</span>
                         hpa
                     </p>
                     <p>
                         <span class="material-symbols-outlined">
                             visibility
                         </span>
-                        Visibility:
-                        <span id="lblVisibility">
-                            10
+                        <span id="lblVisibility"></span>
+                        <span id="lblVisibilityNumber">
+                            0
                         </span>
                         Km
                     </p>   
@@ -89,19 +92,19 @@
                         <span class="material-symbols-outlined">
                             air
                         </span>
-                        Wind
-                        <span id="lblWind">
-                            10
+                        <span id="lblWind"></span>
+                        <span id="lblWindNumber">
+                            0
                         </span>
-                        meter/sec
+                        <span id="lblWindSpeed"></span>
                     </p>
                     <p>
                         <span class="material-symbols-outlined">
                             cloud
                         </span>
-                        Cloud: 
-                        <span id="lblCloud">
-                            10
+                        <span id="lblCloud"></span>
+                        <span id="lblCloudNumber">
+                            0
                         </span>
                         %
                     </p>                   
@@ -110,12 +113,21 @@
         </section>
 
         <section>
-            <p>asdasdsadasd</p>
+            <div id="cardConteiner">
+                <div class="card">
+                    <img src="https://openweathermap.org/img/wn/01d.png" alt="" srcset="">
+
+                    <span>30°C</span>
+
+                    <span>20/02/2020 10:00</span>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
         <p>Clima</p>
     </footer>
+
     <script src="js/script.js"></script>
     <script src="js/traducao/traducao.js"></script>
 </body>

@@ -1,13 +1,27 @@
+:root{
+    --color-1:#2E4D5E;
+    --color-2:#548BAB;
+    --color-3:#69acd3;
+
+    --gray:rgb(197, 197, 197);
+    --black:black;
+    --white:#fefefe;
+}
 
 body{
     margin: 0;
     padding: 0;
     text-transform: capitalize;
+    color: var(--white);
+    background-image: linear-gradient(0deg,var(--color-1) 2%,var(--color-3));
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 100vh;
 }
 
 header{
     padding: .2em;
-    background-color: lightcoral;
+    background-color: rgba(255, 255, 255, 0.014);
 }
 
 header > div {
@@ -37,12 +51,12 @@ header .material-symbols-outlined{
 
 main {
     margin-bottom: 5%;
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 footer{
-    background-color: black;
-    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--white);
     text-align: center;
     font-size: 1.5em;
 
@@ -59,10 +73,11 @@ main > section {
     margin: auto;
     margin-bottom: 0px;
     width: 95%; 
-    background-color: aqua;
+    background-color: rgba(255, 255, 255, 0.090);
+    border-radius: 10px;
 }
 
-main > section > div{
+main > #divTempoAgora > div{
     display: inline-block;
     width: 49%;
     padding-bottom: 30px;
@@ -70,7 +85,11 @@ main > section > div{
     
 }
 
-main > section > div > div{
+#divTempoAgora{
+    margin-top: 7%;
+}
+
+main > #divTempoAgora > div > div{
     display: inline-block;  
 }
 
@@ -87,6 +106,39 @@ p{
     margin-bottom: .2em;
     margin-right: 1em;
     margin-left: .2em;
+}
+
+#cardConteiner{
+    padding: 2em;
+    height: 150px;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+.card{
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 100px;
+    height: 150px;
+    text-align: center;
+    display: inline-block;
+    margin: 2px;
+    white-space: wrap;
+    background-color: var(--color-3);
+    color: var(--white);
+    font-weight: bold;
+}
+
+.card > img{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    margin-left: 10%;
+}
+
+.none{
+    display: none;
 }
 
 #imgClima{
