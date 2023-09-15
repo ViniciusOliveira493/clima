@@ -21,7 +21,7 @@ body{
 
 header{
     padding: .2em;
-    background-color: rgba(255, 255, 255, 0.014);
+    background-color: rgba(255, 255, 255, 0.04);
 }
 
 header > div {
@@ -144,7 +144,6 @@ p{
 #imgClima{
     min-height: 100px;
     min-width: 100px;
-    width: 30%;
     display: inline-block;
 }
 

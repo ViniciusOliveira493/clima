@@ -9,7 +9,6 @@ document.getElementById("btnSearchLocalWeather").addEventListener("click",functi
 
 document.getElementById("btnSearch").addEventListener("click",function () {
     let cidade = document.getElementById("txtCidade").value;
-
     buscarClimaAtual(0,0,cidade);
 });
 
