@@ -130,10 +130,14 @@ function createCard(data) {
     let dataCard = dataEHora[0].split("-");
     dataCard =  new Date(dataCard[0],dataCard[1]-1,dataCard[2]);   
 
-    date.innerHTML = formatarData(dataCard)+" "
-                    +dataEHora[1].substring(0,dataEHora[1].length-3);
+    date.innerHTML = formatarData(dataCard)+" ";
 
     div.appendChild(date);
+
+    let time = document.createElement("span");
+
+    time.innerHTML = dataEHora[1].substring(0,dataEHora[1].length-3);
+    div.appendChild(time);
     return div;
 }
 
