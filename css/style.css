@@ -7,6 +7,9 @@
     --black:black;
     --white:#fefefe;
 }
+html{
+    overflow-x: hidden;
+}
 
 body{
     margin: 0;
@@ -15,8 +18,9 @@ body{
     color: var(--white);
     background-image: linear-gradient(0deg,var(--color-1) 2%,var(--color-3));
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 header{
