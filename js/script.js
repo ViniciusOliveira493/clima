@@ -119,7 +119,7 @@ function createCard(data) {
     div.appendChild(img);
 
     let graus = document.createElement("span");
-    graus.innerHTML = parseInt((data.main.temp)-273.15)+"ºC <br>";
+    graus.innerHTML = `<br> ${ parseInt((data.main.temp)-273.15) } ºC <br>`;
 
     div.appendChild(graus);
     let date = document.createElement("span");
