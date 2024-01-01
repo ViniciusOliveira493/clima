@@ -128,7 +128,7 @@ function createCard(data) {
     dataEHora = dataEHora.split(" ");
 
     let dataCard = dataEHora[0].split("-");
-    dataCard =  new Date(dataCard[0],dataCard[1]-1,dataCard[2]);   
+    dataCard =  new Date(dataCard[0],dataCard[1],dataCard[2]);   
 
     date.innerHTML = formatarData(dataCard)+" ";
 
