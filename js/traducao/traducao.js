@@ -30,6 +30,7 @@ function mudarTextos(frases){
     let lblWind = document.getElementById("lblWind");
     let lblWindSpeed = document.getElementById("lblWindSpeed");
     let lblCloud = document.getElementById("lblCloud");
+    
 
     txtCidade.setAttribute("placeholder",frases.site.txtSearch);
     lblTemp.innerHTML = frases.site.lblTemp;
@@ -42,4 +43,16 @@ function mudarTextos(frases){
     lblWind.innerHTML = frases.site.lblWind;
     lblWindSpeed.innerHTML = frases.site.lblWindSpeed;
     lblCloud.innerHTML = frases.site.lblCloud;
+
+    setTimeout( () => {
+        mudarCondicao(frases) 
+    },5);
+    
+}
+
+function mudarCondicao(frases) {
+    let lblCondition = document.getElementById("lblCondition");
+    if(frases.site[lblCondition.textContent] !== undefined){
+        lblCondition.innerHTML = frases.site[lblCondition.textContent];
+    }
 }

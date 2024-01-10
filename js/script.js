@@ -44,6 +44,7 @@ function buscarClimaAtual(latitude, longitude, city){
         .then((data) => {
             if(data.cod != 404){
                 loadFields1(data);
+                traduzir();
                 buscarClimaDias(latitude, longitude, city);
             }else{
                 alert(data.message);
